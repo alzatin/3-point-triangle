@@ -7,15 +7,24 @@
   "ioValues": [
     {
       "name": "POINT_1",
-      "ioValue": 10
+      "ioValue": [
+        0,
+        -10
+      ]
     },
     {
       "name": "POINT_2",
-      "ioValue": 10
+      "ioValue": [
+        0,
+        10
+      ]
     },
     {
       "name": "POINT_3",
-      "ioValue": 10
+      "ioValue": [
+        10,
+        10
+      ]
     }
   ],
   "topLevel": true,
@@ -35,173 +44,47 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.24096385542168672,
+      "y": 0.18674698795180725,
       "uniqueID": "id-19325",
-      "name": "POINT_1"
+      "name": "POINT_1",
+      "type": "point2d",
+      "pointValue": [
+        0,
+        0
+      ]
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.3313253012048193,
+      "y": 0.3463855421686747,
       "uniqueID": "id-19328",
-      "name": "POINT_2"
+      "name": "POINT_2",
+      "type": "point2d",
+      "pointValue": [
+        0,
+        0
+      ]
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.45481927710843373,
+      "y": 0.5421686746987951,
       "uniqueID": "id-19331",
-      "name": "POINT_3"
-    },
-    {
-      "atomType": "GitHubMolecule",
-      "x": 0.20821114369501464,
-      "y": 0.677710843373494,
-      "uniqueID": "id-19350",
-      "name": "Point",
-      "ioValues": [
-        {
-          "name": "X",
-          "ioValue": 10
-        },
-        {
-          "name": "Y",
-          "ioValue": 10
-        },
-        {
-          "name": "Z",
-          "ioValue": 10
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-19344",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-19345",
-          "name": "X"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
-          "uniqueID": "id-19346",
-          "name": "Y"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.3384615384615385,
-          "uniqueID": "id-19347",
-          "name": "Z"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.5235109717868338,
-          "y": 0.41566265060240964,
-          "uniqueID": "id-19348",
-          "ioValues": [
-            {
-              "name": "X",
-              "ioValue": 10
-            },
-            {
-              "name": "Y",
-              "ioValue": 10
-            },
-            {
-              "name": "Z",
-              "ioValue": 10
-            }
-          ],
-          "codeVersion": 1,
-          "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"X\", type: \"number\", defaultValue: 0 },\n  { inputName: \"Y\", type: \"number\", defaultValue: 0 },\n  { inputName: \"Z\", type: \"number\", defaultValue: 0 }\n];\n\nconsole.log([X,Y,Z])\nreturn [X,Y,Z];\n"
-        },
-        {
-          "atomType": "Circle",
-          "x": 0.7089947089947091,
-          "y": 0.7333333333333334,
-          "uniqueID": "id-19349",
-          "ioValues": [
-            {
-              "name": "diameter",
-              "ioValue": 10
-            }
-          ]
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "X",
-          "ap1ID": "id-19345",
-          "ap2ID": "id-19348"
-        },
-        {
-          "ap2Name": "Y",
-          "ap1ID": "id-19346",
-          "ap2ID": "id-19348"
-        },
-        {
-          "ap2Name": "Z",
-          "ap1ID": "id-19347",
-          "ap2ID": "id-19348"
-        },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-19348",
-          "ap2ID": "id-19344"
-        }
-      ],
-      "parentRepo": {
-        "lastFoundGit": "2026-03-16T10:23:39.263Z",
-        "privateRepo": false,
-        "repoName": "Point",
-        "dateCreated": "2026-03-13T21:45:15Z",
-        "likes": 0,
-        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Point/master/README.md?sanitize=true",
-        "yyyy": 2026,
-        "topMoleculeID": "id-282",
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/BarbourSmith/Point",
-        "topics": [],
-        "parentRepo": "alzatin/Point",
-        "forks": 0,
-        "dateModified": "739688",
-        "ranking": 0.6,
-        "searchField": "point barboursmith returns a point as an array to use in other molecules [x,y,z] ",
-        "owner": "BarbourSmith",
-        "description": "Returns a point as an array to use in other molecules [x,y,z]",
-        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Point/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Point/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "Unitless",
-      "fileTypeVersion": 1
+      "name": "POINT_3",
+      "type": "point2d",
+      "pointValue": null
     },
     {
       "atomType": "Code",
       "x": 0.4740957966764418,
-      "y": 0.463855421686747,
+      "y": 0.4337349397590362,
       "uniqueID": "id-19410",
       "ioValues": [
         {
           "name": "point1",
           "ioValue": [
             0,
-            18
+            -10
           ]
         },
         {
@@ -223,7 +106,28 @@
       "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"point1\", type: \"point2d\", defaultValue: [0,0] },\n  { inputName: \"point2\", type: \"point2d\", defaultValue: [0,10] },\n  { inputName: \"point3\", type: \"point2d\", defaultValue: [10,10] }\n];\n\nlet newPlane = replicad.makePlane()\nlet triDraw = replicad.draw(point1).lineTo(point2).lineTo(point3).close()\nlet cylObj = {\n  geometry: [triDraw],\n  dimension: \"3D\",\n  tags: [\"createdCylinder\"],\n  color: \"#A3CE5B\",\n  plane: null,\n  bom: []\n};\n\nreturn cylObj;\n"
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap2Name": "point1",
+      "ap1ID": "id-19325",
+      "ap2ID": "id-19410"
+    },
+    {
+      "ap2Name": "point2",
+      "ap1ID": "id-19328",
+      "ap2ID": "id-19410"
+    },
+    {
+      "ap2Name": "point3",
+      "ap1ID": "id-19331",
+      "ap2ID": "id-19410"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-19410",
+      "ap2ID": "id-19323"
+    }
+  ],
   "unitsKey": "Unitless",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
