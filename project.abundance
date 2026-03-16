@@ -1,0 +1,13 @@
+{
+    "atomType": "Molecule",
+    "x": 0,
+    "y": 0,
+    "uniqueID": "id-19322",
+    "name": "3-point-triangle",
+    "topLevel": true,
+    "allAtoms": [],
+    "allConnectors": [],
+    "unitsKey": "Unitless",
+    "fileTypeVersion": 1,
+    "filetypeVersion": 1
+}
