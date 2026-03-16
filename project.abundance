@@ -35,50 +35,28 @@
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.3072289156626506,
+      "y": 0.15384615384615385,
       "uniqueID": "id-19325",
       "name": "POINT_1"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.3995366079703429,
+      "y": 0.24615384615384617,
       "uniqueID": "id-19328",
       "name": "POINT_2"
     },
     {
       "atomType": "Input",
       "x": 0.025384615384615384,
-      "y": 0.4918443002780352,
+      "y": 0.3384615384615385,
       "uniqueID": "id-19331",
       "name": "POINT_3"
     },
     {
-      "atomType": "Code",
-      "x": 0.37441204139228595,
-      "y": 0.4849397590361446,
-      "uniqueID": "id-19334",
-      "ioValues": [
-        {
-          "name": "shape",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "radius",
-          "ioValue": 5
-        },
-        {
-          "name": "height",
-          "ioValue": 10
-        }
-      ],
-      "codeVersion": 1,
-      "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"point1\", type: \"array\", defaultValue: [0,0] },\n  { inputName: \"point2\", type: \"array\", defaultValue: [10,10] },\n  { inputName: \"point3\", type: \"array\", defaultValue: [0,10] }\n]\n\nlet newPlane = replicad.makePlane()\nlet triDraw = replicad.draw(point1).lineTo(point2).lineTo(point3)\nlet sketchCir = triDraw.sketchOnPlane(newPlane)\nlet cyl = sketchCir.extrude(height)\nlet cylObj = {\n  geometry: [cyl],\n  dimension: \"3D\",\n  tags: [\"createdCylinder\"],\n  color: \"#A3CE5B\",\n  plane: null,\n  bom: []\n};\n\nlet assembly = await Assembly([importedShape, cylObj]);\nreturn assembly;\n"
-    },
-    {
       "atomType": "GitHubMolecule",
-      "x": 0.16556914393226715,
-      "y": 0.6716867469879517,
+      "x": 0.20821114369501464,
+      "y": 0.677710843373494,
       "uniqueID": "id-19350",
       "name": "Point",
       "ioValues": [
@@ -212,6 +190,25 @@
       },
       "unitsKey": "Unitless",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Code",
+      "x": 0.4780058651026393,
+      "y": 0.5391566265060241,
+      "uniqueID": "id-19383",
+      "ioValues": [
+        {
+          "name": "point1",
+          "ioValue": null,
+          "currentEquation": "NaN"
+        },
+        {
+          "name": "point2",
+          "ioValue": null
+        }
+      ],
+      "codeVersion": 1,
+      "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"point1\", type: \"point2D\", defaultValue: [0,0] },\n  { inputName: \"point2\", type: \"point2D\", defaultValue: [10,20]},\n  { inputName: \"point3\", type: \"point2D\", defaultValue: [0,10] }\n]\n\nlet newPlane = replicad.makePlane()\nlet triDraw = replicad.draw(point1).lineTo(point2).lineTo(point3).close()\nlet sketchCir = triDraw.sketchOnPlane('XY')\nlet cyl = sketchCir.extrude(1)\nlet cylObj = {\n  geometry: [triDraw],\n  dimension: \"2D\",\n  tags: [\"createdCylinder\"],\n  color: \"#A3CE5B\",\n  plane: null,\n  bom: []\n};\n\nreturn cylObj\n\n"
     }
   ],
   "allConnectors": [],
